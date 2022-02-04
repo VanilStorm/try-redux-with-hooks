@@ -1,9 +1,13 @@
 import React from 'react';
 
-const TestComponent = () => {
+const TestComponent = ({handleSetCount,count}) => {
     return (
-        <div>
-            <h2>Test</h2>
+        <div style={{display:'flex', justifyContent:'center', alignItems: 'center', flexDirection:'column', height:'100vh'}}>
+            <h2>Count: {count}</h2>
+            <div style={{display:'flex'}}>
+                <button onClick={handleSetCount} value='+'>Increment</button>
+                <button onClick={handleSetCount} value='-'>Decrement</button>
+            </div>
         </div>
     );
 };
